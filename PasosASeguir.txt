@@ -1,0 +1,16 @@
+Pasos a seguir para el desarrollo de la página web:
+
+Previo: Instalar Xampp y Composer
+
+1. Crear el proyecto					DONE! 
+2. Crear las migraciones en Laravel 
+		
+	Para cada tabla tienes una migración. 
+	PHP artisan migrate -> te lo lleva a una base de datos
+
+	Poner las tablas en plurar y los modelos en singular
+
+3. Crear la base de datos		
+4. Definir los controladores
+5. Crear las rutas
+6. Crear las vistas
