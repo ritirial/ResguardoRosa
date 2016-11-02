@@ -47,7 +47,7 @@ class ActividadController extends Controller
         $this->validate($request,[
             "titulo" => "required|string",
             "descripcion" => "required|string",
-            "seccion" => "required|string",
+            // "seccion" => "required|string",
             ]);
 
         $seccion = $request->seccion + 1;
@@ -112,7 +112,7 @@ class ActividadController extends Controller
             $this->validate($request,[
                 "titulo" => "required|string",
                 "descripcion" => "required|string",
-                "seccion" => "required|string",
+                // "seccion" => "required|string",
                 ]);
 
             $seccion = $request->seccion + 1;
@@ -123,14 +123,14 @@ class ActividadController extends Controller
                 //no existe
                 $actividad->titulo = $request->titulo;
                 $actividad->descripcion = $request->descripcion;
-                $actividad->seccion = $seccion;
+                // $actividad->seccion = $seccion;
                 $actividad->save();
             }else{
                 //existe
                 if(Actividad::where('titulo', $request->titulo)->first()->id == $id){
                     $actividad->titulo = $request->titulo;
                     $actividad->descripcion = $request->descripcion;
-                    $actividad->seccion = $seccion;
+                    // $actividad->seccion = $seccion;
                     $actividad->save();
                 }
                 else{   

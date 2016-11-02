@@ -28,7 +28,7 @@ class FotoActividadController extends Controller
     public function create()
     {
         $actividades = Actividad::select('titulo')->get();
-        $titulos = [];
+        
         foreach ($actividades as $titulo) {
             $titulos[] = $titulo->titulo;
         }
@@ -48,10 +48,18 @@ class FotoActividadController extends Controller
             "image" => "required|image",
             "actividad" => "required|string",
             ]);
-
+        
         $path = $request->image->store('public');
+        
+        $index = $request->actividad;
 
-        $actividad = $request->actividad + 1;
+        $actividades = Actividad::select('titulo')->get();
+        
+        foreach ($actividades as $titulo) {
+            $titulos[] = $titulo->titulo;
+        }
+
+        $actividad = Actividad::where('titulo', $titulos[$index])->first()->id;
 
         FotoActividad::create(["ruta"=>$path, "actividad"=>$actividad]);
 

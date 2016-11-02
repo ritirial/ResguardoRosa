@@ -8,11 +8,10 @@
 		{!! Form::label('descripcion', 'Descripcion de la actividad:'); !!}
 		{!! Form::text('descripcion'); !!}
 	</div>
-	<div class="form-group">
+<!-- 	<div class="form-group">
 		{!! Form::label('seccion', 'Seleccione uno'); !!}
-		{!! Form::select('seccion', $secciones); !!}
-		
-	</div>
+		{!! Form::select('seccion', $secciones); !!}		
+	</div> -->
 	<div class="form-group">
 		{!! Form::submit($submit_text, ['class'=>'btn primary']); !!}
 	</div>
