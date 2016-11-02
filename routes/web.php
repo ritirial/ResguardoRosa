@@ -11,6 +11,37 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::group(['middleware'=>'auth'], function() {
+
+
+	Route::get('/', 'HomeController@index')->name('/');
+
+	Route::get('/home', function() {
+		return redirect()->route('/');
+	});
+
+	Route::resource('actividades', 'ActividadController');
+
+	Route::resource('avisos', 'AvisoController');
+
+	Route::resource('donantes', 'DonanteController');
+
+	Route::resource('fotosactividades', 'FotoActividadController');
+
+	Route::resource('integrantes', 'IntegranteController');
+
+	Route::resource('secciones', 'SeccionController');
+	Auth::routes();
+
+	Route::get('logout', function(){
+			Auth::logout();
+			return redirect()->route('/');
+	})->name('logout');
+
 });
+
+Auth::routes();
