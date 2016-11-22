@@ -70,6 +70,7 @@
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
                                     </span>
                                 @endif
+                                
                             </div>
                         </div>
 

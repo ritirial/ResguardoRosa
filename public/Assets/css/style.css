@@ -1,0 +1,26 @@
+body{
+}
+
+.navbar-custom .nav li a, h1, .subheading, .pager li>a{
+    color: #f53f84;
+}
+
+.navbar-custom .nav li a:hover{
+    color: #f77aa8;
+}
+
+hr.small{
+    border-color: #f77aa8;
+}
+
+.post-title{
+    color: #23abd6;
+}
+
+.navbar-custom {
+    background: rgba(245, 63, 132, 0.1);
+}
+
+.navbar-custom .navbar-brand {
+    padding: 8px;
+}
