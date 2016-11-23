@@ -15,14 +15,14 @@
 //     return view('welcome');
 // });
 
-Route::group(['middleware'=>'auth'], function() {
+Route::get('/', 'HomeController@index')->name('/');
 
+Route::get('/home', function() {
+	return redirect()->route('/');
+});
 
-	Route::get('/', 'HomeController@index')->name('/');
+Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 
-	Route::get('/home', function() {
-		return redirect()->route('/');
-	});
 
 	Route::resource('actividades', 'ActividadController');
 
