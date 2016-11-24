@@ -15,14 +15,13 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'HomeController@index')->name('/');
-
-Route::get('/home', function() {
-	return redirect()->route('/');
-});
-
 Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 
+	Route::get('/admin', 'HomeController@index')->name('/admin');
+
+	Route::get('/home', function() {
+		return redirect()->route('/admin');
+	});
 
 	Route::resource('actividades', 'ActividadController');
 
@@ -35,13 +34,16 @@ Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 	Route::resource('integrantes', 'IntegranteController');
 
 	Route::resource('secciones', 'SeccionController');
+
 	Auth::routes();
 
 	Route::get('logout', function(){
-			Auth::logout();
-			return redirect()->route('/');
+		Auth::logout();
+		return redirect()->route('/');
 	})->name('logout');
 
 });
 
 Auth::routes();
+
+Route::resource('/', 'ResguardoController');
