@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Donadores</a>
+                        <a href="{{route('donaciones.index')}}">Donadores</a>
                     </li>
                     <li>
                         <a href="#">Galería</a>
@@ -51,7 +51,7 @@
                         <a href="#">Nosotros</a>
                     </li>
                     <li>
-                        <a href="#">INGRESAR</a>
+                        <a href="{{route('/admin')}}">INGRESAR</a>
                     </li>
                 </ul>
             </div>

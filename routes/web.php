@@ -37,9 +37,9 @@ Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 
 	Auth::routes();
 
-	Route::get('logout', function(){
+	Route::get('logout', function() {
 		Auth::logout();
-		return redirect()->route('/');
+		return redirect()->route('/admin');
 	})->name('logout');
 
 });
@@ -47,3 +47,5 @@ Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 Auth::routes();
 
 Route::resource('/', 'ResguardoController');
+
+Route::resource('donaciones', 'ResguardoController@donaciones');
