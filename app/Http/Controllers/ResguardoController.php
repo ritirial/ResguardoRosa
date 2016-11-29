@@ -8,7 +8,6 @@ use App\Http\Requests;
 
 use App\FotoActividad;
 use App\Integrante;
-use App\Seccion;
 use App\Actividad;
 use App\Donante;
 use App\Aviso;
@@ -27,7 +26,7 @@ class ResguardoController extends Controller
      */
     public function index()
     {
-        return view('rr.index', ['img'=>"/slider.jpg", 'imagenes'=>FotoActividad::all(), 'integrantes'=>Integrante::all(), 'secciones'=>Seccion::all(), 'donantes'=>Donante::all(), 'avisos'=>Aviso::all(), 'actividades' => Actividad::orderBy('fecha','asc')->get()]);
+        return view('rr.index', ['actividades' => Actividad::orderBy('fecha','asc')->get()]);
     }
 
     public function donaciones()

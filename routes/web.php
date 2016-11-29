@@ -46,6 +46,8 @@ Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 
 Auth::routes();
 
-Route::resource('/', 'ResguardoController');
+Route::resource('/', 'ResguardoController@index');
+
+Route::get('/', 'ResguardoController@index')->name('/');
 
 Route::resource('donaciones', 'ResguardoController@donaciones');
