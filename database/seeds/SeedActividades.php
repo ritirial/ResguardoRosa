@@ -14,25 +14,25 @@ class SeedActividades extends Seeder
         DB::table('Actividades')->insert([
             'titulo' => "Ingles",
             'descripcion' => "Esta es la pagina de ingles",
-            'seccion' => 1,
+            'fecha' => "2016-12-15",
         ]);
 
         DB::table('Actividades')->insert([
             'titulo' => "Matematicas",
             'descripcion' => "Esta es la pagina de matematicas",
-            'seccion' => 1,
+            'fecha' => "2016-12-15",
         ]);
 
         DB::table('Actividades')->insert([
             'titulo' => "Taller de orientacion nutricional",
             'descripcion' => "Este es un taller de orientacion nutricional",
-            'seccion' => 2,
+            'fecha' => "2016-12-15",
         ]);
 
         DB::table('Actividades')->insert([
             'titulo' => "Faramacia viva",
             'descripcion' => "Una farmacia viva",
-            'seccion' => 2,
+            'fecha' => "2016-12-15",
         ]);
     }
 }
