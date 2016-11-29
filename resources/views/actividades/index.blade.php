@@ -35,7 +35,7 @@
 						<th>ID</th>
 						<th>T&iacute;tulo</th>
 						<th>Descripci&oacute;n</th>
-						<!-- <th>Secci&oacute;n</th> -->
+						<th>Fecha</th>
 						<th>Accion</th>
 					</tr>
 				</thead>
@@ -45,7 +45,7 @@
 						<td data-title="ID"> {{ $actividad->id }} </td>
 						<td data-title="Titulo"> <a href="{{ route('actividades.show', [ $actividad->id]) }}">{{ $actividad->titulo }} </td>
 						<td data-title="Descripcion"> {{ $actividad->descripcion }} </td>
-						<!-- <td data-title="Seccion"> {{ App\Seccion::find($actividad->seccion)->titulo}} </td> -->
+						<td data-title="Seccion"> {{ $actividad->fecha->diffForHumans() }} </td>
 						<td data-title="Accion">
 							<div class="col-xs-2 col-xs-offset-3">
 								{!! Form::open( [ 'method' => 'GET', 'route'=>['actividades.edit', $actividad->id]]) !!}

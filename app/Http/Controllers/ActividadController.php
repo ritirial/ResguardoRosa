@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Actividad;
 use App\Seccion;
+use Carbon\Carbon;
 
 class ActividadController extends Controller
 {
+    public function __construct()
+    {
+        Carbon::setLocale('es');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -47,16 +53,14 @@ class ActividadController extends Controller
         $this->validate($request,[
             "titulo" => "required|string",
             "descripcion" => "required|string",
-            // "seccion" => "required|string",
+            "fecha" => "required|date",
             ]);
-
-        $seccion = $request->seccion + 1;
 
         $alreadyExists = Actividad::where("titulo",$request->titulo)->count();
 
         if($alreadyExists == 0){
             //no existe
-            Actividad::create(["titulo"=>$request->titulo, "descripcion"=>$request->descripcion, "seccion"=>$seccion]);
+            Actividad::create(["titulo"=>$request->titulo, "descripcion"=>$request->descripcion, "fecha"=>$request->fecha]);
         }else{
             //existe
             $request->session()->flash('error', "Ya existe esta actividad.");
@@ -112,10 +116,8 @@ class ActividadController extends Controller
             $this->validate($request,[
                 "titulo" => "required|string",
                 "descripcion" => "required|string",
-                // "seccion" => "required|string",
+                "fecha" => "required|date",
                 ]);
-
-            $seccion = $request->seccion + 1;
             
             $alreadyExists = Actividad::where("titulo",$request->titulo)->count();
 
@@ -123,14 +125,14 @@ class ActividadController extends Controller
                 //no existe
                 $actividad->titulo = $request->titulo;
                 $actividad->descripcion = $request->descripcion;
-                // $actividad->seccion = $seccion;
+                $actividad->fecha = $request->fecha;
                 $actividad->save();
             }else{
                 //existe
                 if(Actividad::where('titulo', $request->titulo)->first()->id == $id){
                     $actividad->titulo = $request->titulo;
                     $actividad->descripcion = $request->descripcion;
-                    // $actividad->seccion = $seccion;
+                    $actividad->fecha = $request->fecha;
                     $actividad->save();
                 }
                 else{   

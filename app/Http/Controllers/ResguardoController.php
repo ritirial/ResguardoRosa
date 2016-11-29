@@ -12,8 +12,14 @@ use App\Seccion;
 use App\Actividad;
 use App\Donante;
 use App\Aviso;
+use Carbon\Carbon;
 class ResguardoController extends Controller
 {
+    public function __construct()
+    {
+        Carbon::setLocale('es');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +27,7 @@ class ResguardoController extends Controller
      */
     public function index()
     {
-        return view('rr.index', ['img'=>"/slider.jpg", 'imagenes'=>FotoActividad::all(), 'integrantes'=>Integrante::all(), 'secciones'=>Seccion::all(), 'donantes'=>Donante::all(), 'avisos'=>Aviso::all()]);
+        return view('rr.index', ['img'=>"/slider.jpg", 'imagenes'=>FotoActividad::all(), 'integrantes'=>Integrante::all(), 'secciones'=>Seccion::all(), 'donantes'=>Donante::all(), 'avisos'=>Aviso::all(), 'actividades' => Actividad::orderBy('fecha','asc')->get()]);
     }
 
     /**

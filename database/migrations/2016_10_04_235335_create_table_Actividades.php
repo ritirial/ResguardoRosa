@@ -17,8 +17,7 @@ class CreateTableActividades extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('descripcion');
-            $table->integer('seccion')->unsigned();
-            $table->foreign('seccion')->references('id')->on('Secciones')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamp('fecha');
             $table->timestamps();
         });
     }

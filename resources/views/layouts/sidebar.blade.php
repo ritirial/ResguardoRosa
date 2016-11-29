@@ -46,9 +46,6 @@
                     <a href="{{ route('donantes.index') }}">Donantes</a>
                 </li>
                 <li>
-                    <a href="{{ route('secciones.index') }}">Secciones</a>
-                </li>
-                <li>
                     <a href="{{ route('actividades.index') }}">Actividades</a>
                 </li>
                 <li>

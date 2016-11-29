@@ -39,7 +39,7 @@ Route::group(['middleware'=>'auth'], function() { //Función de autenticación
 
 	Route::get('logout', function(){
 		Auth::logout();
-		return redirect()->route('/');
+		return redirect()->route('/admin');
 	})->name('logout');
 
 });

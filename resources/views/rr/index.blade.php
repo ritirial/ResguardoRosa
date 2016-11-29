@@ -22,17 +22,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" id="recentsPreview">
+            @foreach($actividades as $actividad)
             <div class="post-preview">
                 <a href="#">
                     <h2 class="post-title">
-                        Titulo
+                        {{$actividad->titulo}}
                     </h2>
                 </a>
                 <h3 class="post-subtitle">
-                    Subtitulo / Descripción
+                    {{$actividad->descripcion}}
                 </h3>
-                <p class="post-meta">Publicado el 26 de Octubre de 2016</p>
+                <p class="post-meta">{{$actividad->fecha->diffForHumans()}}</p>
             </div>
+            @endforeach
             <hr>
             <!-- Pager -->
             <ul class="pager">
