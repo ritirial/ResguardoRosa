@@ -45,10 +45,10 @@
                         <a href="{{route('donaciones.index')}}">Donadores</a>
                     </li>
                     <li>
-                        <a href="#">Galería</a>
+                        <a href="{{route('gallery.index')}}">Galería</a>
                     </li>
                     <li>
-                        <a href="#">Nosotros</a>
+                        <a href="{{route('about.index')}}">Nosotros</a>
                     </li>
                     <li>
                         <a href="{{route('/admin')}}">INGRESAR</a>

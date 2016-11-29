@@ -29,19 +29,19 @@
                     <!--LISTA DE DONADORES-->
                     <div class="row">
                         <div class="col-xs-12">
-                            @foreach ($donantes as $donante)
 
+                            @foreach ($donantes as $donante)
                             <div class="col-xs-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="{{Storage::url($donante->logo)}}" alt="...">
+                                    <img src="{{Storage::url($donante->logo)}}">
                                     <div class="caption">
                                         <h3>{{$donante->nombre}}</h3>
                                         <p>{{$donante->descripcion}}</p>
                                     </div>
                                 </div>
                             </div>
-
                             @endforeach
+
                         </div>
                     </div>
 

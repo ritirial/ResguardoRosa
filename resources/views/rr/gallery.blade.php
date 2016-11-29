@@ -9,9 +9,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Donaciones</h1>
-                        <hr class="small">
-                        <span class="subheading">Apreciamos tu apoyo</span>
+                        <h1>Galería</h1>
                     </div>
                 </div>
             </div>
@@ -24,25 +22,16 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-                    <h2 class="section-heading">Donadores</h2>
-
-                    <!--LISTA DE DONADORES-->
+                    <!--SECCION DE MULTIMEDIA-->
                     <div class="row">
                         <div class="col-xs-12">
-                            
+
+                        	
+                        
                         </div>
                     </div>
 
                     <hr>
-
-                    <p>Tu tambien puedes contribuir</p>
-
-                    <!--SECCION PARA BOTON DE DONACION-->
-                    <div class="row">
-                        <div class="col-xs-12">
-                            
-                        </div>
-                    </div>
 
                 </div>
             </div>

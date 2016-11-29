@@ -51,3 +51,7 @@ Route::resource('/', 'ResguardoController@index');
 Route::get('/', 'ResguardoController@index')->name('/');
 
 Route::resource('donaciones', 'ResguardoController@donaciones');
+
+Route::resource('about', 'ResguardoController@team');
+
+Route::resource('gallery', 'ResguardoController@multimedia');

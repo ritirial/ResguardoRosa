@@ -34,6 +34,16 @@ class ResguardoController extends Controller
         return view('rr.donaciones', ['donantes'=>Donante::all()]);
     }
 
+    public function team()
+    {
+        return view('rr.about', ['integrantes'=>Integrante::all()]);
+    }
+
+    public function multimedia()
+    {
+        return view('rr.gallery', []);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
