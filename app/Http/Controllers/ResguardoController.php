@@ -26,7 +26,7 @@ class ResguardoController extends Controller
      */
     public function index()
     {
-        return view('rr.index', ['actividades' => Actividad::orderBy('fecha','asc')->get()]);
+        return view('rr.index', ['actividades' => Actividad::orderBy('fecha','asc')->get(), 'imagenes', FotoActividad::all()]);
     }
 
     public function donaciones()
@@ -41,7 +41,7 @@ class ResguardoController extends Controller
 
     public function multimedia()
     {
-        return view('rr.gallery', []);
+        return view('rr.gallery', ['multimedia'=>FotoActividad::orderBy('actividad', 'asc')->get()]);
     }
 
     /**
@@ -73,7 +73,9 @@ class ResguardoController extends Controller
      */
     public function show($id)
     {
-        //
+        $actividad = Actividad::where('id', $id)->firstOrFail();
+        $imagenes = FotoActividad::where('actividad', $id)->get();
+        return view('rr.show', ['actividad' => $actividad, 'imagenes' => $imagenes]);
     }
 
     /**

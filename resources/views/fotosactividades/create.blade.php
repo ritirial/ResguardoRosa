@@ -28,7 +28,7 @@
 @endif
 
 <div class="col-sm-12"> 
-    <h2> Agregar para Actividades </h2>
+    <h2> Agregar fotos para Actividades </h2>
     <h3> Aqu&iacute; podr&aacute;s agregar las fotos para las actividades. </h3>
     <br>
     {!! Form::model(new App\FotoActividad, ['route' =>'fotosactividades.store', 'files' => 'true' ]) !!}

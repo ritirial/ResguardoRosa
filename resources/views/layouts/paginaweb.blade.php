@@ -35,7 +35,7 @@
                     <span class="sr-only">Cambiar navegación</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{route('/')}}"><img src="Assets/img/RELOGO.png" style="height: 48px; padding-left: 0px;"></a>
+                <a class="navbar-brand" href="{{route('/')}}"><img src="{{URL::asset('Assets/img/RELOGO.png')}}" style="height: 48px; padding-left: 0px;"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

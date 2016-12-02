@@ -33,12 +33,7 @@ class ActividadController extends Controller
      */
     public function create()
     {
-        $seccion = Seccion::select('titulo')->get();
-        $titulos = [];
-        foreach ($seccion as $titulo) {
-            $titulos[] = $titulo->titulo;
-        }
-        return view('actividades.create', ['secciones'=>$titulos]);
+        return view('actividades.create');
     }
 
     /**
@@ -91,13 +86,8 @@ class ActividadController extends Controller
      */
     public function edit($id)
     {
-        $seccion = Seccion::select('titulo')->get();
-        $titulos = [];
-        foreach ($seccion as $titulo) {
-            $titulos[] = $titulo->titulo;
-        }
         $actividad = Actividad::where('id', $id)->firstOrFail();
-        return view('actividades.editar', ['actividad' => $actividad], ['secciones' => $titulos]);
+        return view('actividades.editar', ['actividad' => $actividad]);
     }
 
     /**
