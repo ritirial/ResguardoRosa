@@ -15,10 +15,5 @@ class SeedFotosActividades extends Seeder
             'ruta' => 'public/something.jpg',
             'actividad' => 3,
         ]);
-
-        DB::table('FotosActividades')->insert([
-            'ruta' => 'public/cat.jpg',
-            'actividad' => 1,
-        ]);
     }
 }

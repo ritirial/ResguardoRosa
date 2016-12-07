@@ -24,6 +24,24 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+                    <h2 class="section-heading">Nuestro Objetivo</h2>
+
+                    <p align="justify">El obejtivo principal de la Asociación es cuidar, escuchar, orientar, capacitar, ayudar, asesorar, asistir y servir a las niñas, mujeres adultas y mujeres de la tercera edad que lo necesiten, de cualquier núcleo social, para así poder enfrentar los diferentes problemas que a lo largo de la vida se presentan, dando solución a sus necesidades tanto económicas como de Índole jurídico, psicológico y espiritual para lograr la armonía con ellas mismas y con su “yo” interno.</p>
+
+                    <hr>
+
+                    <h2 class="section-heading">Nuestra Misión</h2>
+
+                    <p align="justify">La misión es rescatar la dignidad de la mujer impartiéndo talleres productivos, deporte, la espiritualidad y la naturaleza, a través de donativos del país y del extrangero para el cumplimiento de su objetivo.</p>
+
+                    <hr>
+
+                    <h2 class="section-heading">Nuestra Visión</h2>
+
+                    <p align="justify">La visión es enlazarse a nivel nacional e internacional con otras asociaciones civiles, gobiernos, empresas privadas, públicas y empresariales, dando a conocer nuestro proyecto, para que la mujer pueda recibir mayores beneficios y esto se vea reflejado en su desarrollo cultural, físico y económico propiciando un impacto en la sociedad que se verá reflejado en la armonía familiar.</p>
+
+                    <hr>
+
                     <h2 class="section-heading">Miembros</h2>
 
                     <!--LISTA DE DONADORES-->

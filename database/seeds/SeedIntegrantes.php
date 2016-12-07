@@ -12,19 +12,9 @@ class SeedIntegrantes extends Seeder
     public function run()
     {
         DB::table('Integrantes')->insert([
-            'nombre' => "Angeles",
-            'descripcion' => "Activo socialmente",
-            'foto' => 'public/cat.jpg',
-        ]);
-        DB::table('Integrantes')->insert([
-            'nombre' => "Pedro",
-            'descripcion' => "Educador",
-            'foto' => 'public/something.jpg',
-        ]);
-        DB::table('Integrantes')->insert([
-            'nombre' => "Juan",
-            'descripcion' => "Amigo de los niños",
-            'foto' => 'public/dog.jpg',
+            'nombre' => "Rosaura García Muñoz",
+            'descripcion' => "Presidenta de Resguardo Rosa",
+            'foto' => 'public/user.png',
         ]);
     }
 }

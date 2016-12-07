@@ -13,15 +13,24 @@
 		</div>
 	</div>
 </header>
-<p class="text-center">{{$actividad->descripcion}}</p>
-@foreach($imagenes as $imagen)
-<div class="col-xs-6 col-md-4">
-	<div class="thumbnail">
-		<img src="{{Storage::url($imagen->ruta)}}">
-	</div>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+            <h2>Descripción</h2>
+            <p align="justify">{{$actividad->descripcion}}</p>
+            <hr>
+            <h2>Fotos del evento</h2>
+            @foreach($imagenes as $imagen)
+            <div class="col-xs-6 col-md-6">
+                <div class="thumbnail">
+                    <img src="{{Storage::url($imagen->ruta)}}">
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </div>
-@endforeach
-<br>
 <!-- Footer -->
 <footer>
 	<div class="container">

@@ -29,6 +29,7 @@
 
 <div class="col-sm-12"> 
     <h2> Crear actividad </h2>
+    <hr>
     <h3> Aqu&iacute; podr&aacute;s crear una actividad. </h3>
     <br>
     {!! Form::model(new App\Actividad, ['route' =>'actividades.store', 'files' => 'true' ]) !!}

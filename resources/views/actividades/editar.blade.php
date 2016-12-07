@@ -11,7 +11,8 @@
     </div>
 @endif
 
-<h2> Editar actividad </h2>
+<h2> Editar la actividad </h2>
+<hr>
 <p> Aqu&iacute; podr&aacute;s editar la actividad. <br> </p>
 
 <div class="col-sm-12"> 

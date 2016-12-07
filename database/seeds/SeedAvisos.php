@@ -16,15 +16,5 @@ class SeedAvisos extends Seeder
             'descripcion' => "Es una recolecta",
             'foto' => 'cat.jpg',
         ]);
-        DB::table('Avisos')->insert([
-            'titulo' => "Cambio de politicas",
-            'descripcion' => "Es otro anuncio",
-            'foto' => 'algo.jpg',
-        ]);
-        DB::table('Avisos')->insert([
-            'titulo' => "Algun anuncio",
-            'descripcion' => "Uno mas",
-            'foto' => 'xd.png',
-        ]);
     }
 }

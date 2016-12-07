@@ -9,8 +9,8 @@
 		{!! Form::text('descripcion'); !!}
 	</div>
 	<div>
-		{!! Form::label('fecha', 'Seleccional a fecha de la actividad') !!}
-		{!! Form::date('fecha', Carbon\Carbon::now()) !!}
+		{!! Form::label('fecha', 'Selecciona a fecha de la actividad') !!}
+		{!! Form::date('fecha', Carbon\Carbon::now()); !!}
 	</div>
 	<div class="form-group">
 		{!! Form::submit($submit_text, ['class'=>'btn primary']); !!}

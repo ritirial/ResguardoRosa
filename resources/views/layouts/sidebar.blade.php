@@ -31,28 +31,25 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <div id="sidebar-wrapper" style="background-color:#f44687;">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a>@yield('title')</a>
+                    <a style="color:white;">@yield('title')</a>
                 </li>
                 <li>
-                    <a href="{{ route('avisos.index') }}">Avisos</a>
+                    <a href="{{ route('actividades.index') }}" style="color:white; border-bottom:1px solid white; border-top:2px solid white;">ACTIVIDADES</a>
                 </li>
                 <li>
-                    <a href="{{ route('integrantes.index') }}">Integrantes</a>
+                    <a href="{{ route('fotosactividades.index') }}" style="color:white; border-bottom:1px solid white;">FOTOS DE ACTIVIDADES</a>
                 </li>
                 <li>
-                    <a href="{{ route('donantes.index') }}">Donantes</a>
+                    <a href="{{ route('integrantes.index') }}" style="color:white; border-bottom:1px solid white;">INTEGRANTES</a>
                 </li>
                 <li>
-                    <a href="{{ route('actividades.index') }}">Actividades</a>
+                    <a href="{{ route('donantes.index') }}" style="color:white;">DONANTES</a>
                 </li>
                 <li>
-                    <a href="{{ route('fotosactividades.index') }}">Fotos Actividades</a>
-                </li>
-                <li>
-                    <a class="logout" href="{{route('logout')}}">Logout</a>
+                    <a class="logout" href="{{route('logout')}}" style="color:white; border-bottom:2px solid white; border-top:2px solid white;"><strong>CERRAR SESION</strong></a>
                 </li>
             </ul>
         </div>
